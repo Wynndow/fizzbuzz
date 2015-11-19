@@ -13,4 +13,5 @@ describe 'fizzbuzz' do
   it 'retuns original number if not 3 or 5' do
     expect(fizzbuzz(1)).to eq(1)
   end
+
 end

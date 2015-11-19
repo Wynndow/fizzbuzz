@@ -24,8 +24,18 @@ describe 'fizzbuzz' do
 
   end
 
-  it 'retuns original number when passed 1' do
-    expect(fizzbuzz(1)).to eq(1)
+  context 'returns original number if number passed is not divisible by 3 or 5' do
+    it 'when passed 1' do
+      expect(fizzbuzz(1)).to eq(1)
+    end
+
+    it 'when passed 17' do
+      expect(fizzbuzz(17)).to eq(17)
+    end
+  end
+
+  it 'returns \'fizzbuzz\' if number passed is divisible by both 3 and 5' do
+    expect(fizzbuzz(15)).to eq('fizzbuzz')
   end
 
 end
